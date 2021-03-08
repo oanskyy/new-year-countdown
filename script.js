@@ -8,17 +8,20 @@ const loading = document.getElementById('loading')
 
 
 const currentYear = new Date().getFullYear();
-const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`)
-const devInterviewTime = new Date(`March 17 ${currentYear} 00:00:00`)
+const daysOfCodeChallenge = new Date(`June 17 ${currentYear} 00:00:00`)
+// const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`)
+// const devInterviewTime = new Date(`March 17 ${currentYear} 00:00:00`)
 
 // Set background year
-year.innerText = currentYear + 1;
+year.innerText = currentYear ;
 
 // Update countdown time
 function updateCountdown() { 
   const currentTime = new Date(); 
+
+  const diff = daysOfCodeChallenge - currentTime;
   // const diff = newYearTime - currentTime;
-  const diff = devInterviewTime - currentTime;
+  // const diff = devInterviewTime - currentTime;
 
   const d = Math.floor(diff /1000 / 60 / 60 / 24)
   const h = Math.floor(diff /1000 / 60 / 60) % 24
