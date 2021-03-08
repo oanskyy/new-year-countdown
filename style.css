@@ -74,6 +74,10 @@ h1 {
     font-size: 45px;
   }
 
+  .year{ 
+    font-size: 130px;
+  }
+  
   .time { 
     margin: 5px; 
   }
